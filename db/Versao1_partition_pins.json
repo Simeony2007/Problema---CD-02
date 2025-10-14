@@ -2,24 +2,7 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : [
-				{
-					"name" : "saida",
-					"strict" : false
-				},
-				{
-					"name" : "entrada",
-					"strict" : false
-				},
-				{
-					"name" : "copie",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				}
-			]
+			"pins" : []
 		}
 	]
 }
