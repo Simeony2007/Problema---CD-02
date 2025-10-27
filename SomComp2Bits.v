@@ -1,0 +1,13 @@
+module SomComp2Bits(S, Cout, A, B, Cin);
+	// Declarações
+	input [1:0]A; 
+	input [1:0]B;
+	input Cin;
+	output Cout;
+	output [1:0]S;
+	wire T0;
+	
+	SomComp1bit b0(.S(S[0]), .Cout(T0), .A(A[0]), .B(B[0]), .Cin(Cin));
+	SomComp1bit b1(.S(S[1]), .Cout(Cout), .A(A[1]), .B(B[1]), .Cin(T0));
+	
+endmodule

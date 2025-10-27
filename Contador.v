@@ -1,14 +1,39 @@
-module Contador(S, A, B);
-	// ENTRADAS, SAIDAS E FIOS:
-	input [2:0]A;
-	input [2:0]B;
-	output [2:0]S;
-	wire [2:0]T;
+module Contador(S, btn, reset);
+	input btn, reset; // VERIFICAR WAVEFORM SEM O CLOCK, USANDO O BTN NO LUGAR!!!
+	output [1:0]S;
 	
-	// INSTANCIAÇÃO DO SUBTRATOR COMPLETO DE 1 BIT:
-	SubComp1bit U0(S[0], T[1], A[0], B[0], 0);
-	SubComp1bit U1(S[1], T[2], A[1], B[1], T[1]);
-	SubComp1bit U2(S[2], 0, A[2], B[2], T[2]);
-
+	wire [1:0]valorFF;
+	wire [1:0]soma;
 	
+	wire GND;
+	
+	// FAZER O SISTEMA DE BOUNCE DO BOTÃO
+		
+	FlipFlopD ff0(
+		.a(valorFF[0]),
+      .s(S[0]),
+      .clk(btn),
+      .reset(reset));
+		
+	FlipFlopD ff1(
+		.a(valorFF[1]),
+      .s(S[1]),
+      .clk(btn),
+      .reset(reset));
+		
+	ControleFFD Controle0(
+		.S(valorFF[0]), 
+		.A(soma[0]), 
+		.SFF(S[0]), 
+		.Op(btn));
+		
+	ControleFFD Controle1(
+		.S(valorFF[1]), 
+		.A(soma[1]), 
+		.SFF(S[1]), 
+		.Op(btn));	
+		
+	SomComp2Bits somador(.S(soma), .Cout(GND), .A(S), .B(2'b01), .Cin(0));
+	
+		
 endmodule

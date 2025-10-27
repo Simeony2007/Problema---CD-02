@@ -1,150 +1,42 @@
-|Multiplicador
-S[0] <= <GND>
-S[1] <= <GND>
-S[2] <= <GND>
-S[3] <= <GND>
-S[4] <= <GND>
-S[5] <= <GND>
-S[6] <= <GND>
-S[7] <= <GND>
-S[8] <= <GND>
-S[9] <= <GND>
-S[10] <= <GND>
-S[11] <= <GND>
-S[12] <= <GND>
-S[13] <= <GND>
-S[14] <= <GND>
-S[15] <= <GND>
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-B[0] => comb.DATAA
-B[1] => comb.DATAB
-B[2] => ~NO_FANOUT~
-B[3] => ~NO_FANOUT~
-B[4] => ~NO_FANOUT~
-B[5] => ~NO_FANOUT~
-B[6] => ~NO_FANOUT~
-B[7] => ~NO_FANOUT~
-Clock => Clock.IN1
-Contador => Decoder0.IN0
+|Debounce
+S <= and0.DB_MAX_OUTPUT_PORT_TYPE
+Btn => Btn.IN1
+Clk => Clk.IN5
+rst => rst.IN5
 
 
-|Multiplicador|Mult8por1bit:Palavra0
-S[0] <= and0.DB_MAX_OUTPUT_PORT_TYPE
-S[1] <= and1.DB_MAX_OUTPUT_PORT_TYPE
-S[2] <= and2.DB_MAX_OUTPUT_PORT_TYPE
-S[3] <= and3.DB_MAX_OUTPUT_PORT_TYPE
-S[4] <= and4.DB_MAX_OUTPUT_PORT_TYPE
-S[5] <= and5.DB_MAX_OUTPUT_PORT_TYPE
-S[6] <= and6.DB_MAX_OUTPUT_PORT_TYPE
-S[7] <= and7.DB_MAX_OUTPUT_PORT_TYPE
-A[0] => and0.IN0
-A[1] => and1.IN0
-A[2] => and2.IN0
-A[3] => and3.IN0
-A[4] => and4.IN0
-A[5] => and5.IN0
-A[6] => and6.IN0
-A[7] => and7.IN0
-B => and0.IN1
-B => and1.IN1
-B => and2.IN1
-B => and3.IN1
-B => and4.IN1
-B => and5.IN1
-B => and6.IN1
-B => and7.IN1
+|Debounce|FlipFlopD:FF0
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
 
 
-|Multiplicador|Registrador8Bits:Registrador0
-saida[0] <= FlipFlop:f0.port3
-saida[1] <= FlipFlop:f1.port3
-saida[2] <= FlipFlop:f2.port3
-saida[3] <= FlipFlop:f3.port3
-saida[4] <= FlipFlop:f4.port3
-saida[5] <= FlipFlop:f5.port3
-saida[6] <= FlipFlop:f6.port3
-saida[7] <= FlipFlop:f7.port3
-saida[8] <= FlipFlop:f8.port3
-clock => clock.IN9
-copie => copie.IN9
-entrada[0] => entrada[0].IN1
-entrada[1] => entrada[1].IN1
-entrada[2] => entrada[2].IN1
-entrada[3] => entrada[3].IN1
-entrada[4] => entrada[4].IN1
-entrada[5] => entrada[5].IN1
-entrada[6] => entrada[6].IN1
-entrada[7] => entrada[7].IN1
-entrada[8] => entrada[8].IN1
+|Debounce|FlipFlopD:FF1
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
 
 
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f0
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|Debounce|FlipFlopD:FF2
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
 
 
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f1
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|Debounce|FlipFlopD:FF3
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
 
 
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f2
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f3
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f4
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f5
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f6
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f7
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Multiplicador|Registrador8Bits:Registrador0|FlipFlop:f8
-clock => saida~reg0.CLK
-copie => saida~reg0.ENA
-entrada => saida~reg0.DATAIN
-saida <= saida~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|Debounce|FlipFlopD:ValorAntigo
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
 
 

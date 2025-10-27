@@ -1,0 +1,11 @@
+module Debounce(S, Btn, Clk);
+	input Btn, Clk;
+	output S;
+	wire T0, T1;
+
+	FlipFlopD ValorAntigo(T0, Btn, Clk);
+	
+	and and0(S, T0, T1);
+	not not0(T1, Btn);
+	
+endmodule

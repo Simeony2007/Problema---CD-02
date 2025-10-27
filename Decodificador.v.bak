@@ -1,0 +1,14 @@
+module Decodificador(S0, S1, S2, S3, A);
+	input [1:0]A;
+	output S0, S1, S2, S3;
+
+	not(T0, A[0]);
+	not(T1, A[1]);
+
+	and(S0, T0, T1);
+	and(S1, A[0], T1);
+	and(S2, T0, A[1]);
+	and(S3, A[0], A[1]);
+	
+	
+endmodule

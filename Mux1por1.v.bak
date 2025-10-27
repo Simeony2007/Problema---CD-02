@@ -1,0 +1,13 @@
+module Mux1por1(S, A, B, Op);
+	input A, B, OP;
+	output S;
+	wire nOp, T0, T1;
+	
+	not(nOp, Op);
+	
+	and(T0, nOp, A);
+	and(T1, Op, B);
+	
+	or(S, T0, T1);
+
+endmodule

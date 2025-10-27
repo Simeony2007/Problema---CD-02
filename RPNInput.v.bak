@@ -1,0 +1,22 @@
+module RPNInput(S0, S1, S2, S3, A, FF0, FF1, FF2, FF3, Contador);
+	input A, FF0, FF1, FF2, FF3;
+	input [1:0]Contador;
+	output S0, S1, S2, S3;
+	wire T0, T1, T2, T3;
+
+	Codificador(T0, T1, T2, T3, Contador); 
+	// Quando contador 00, T0 = 1
+	// Quando contador 01, T1 = 1
+	// Quando contador 10, T2 = 1
+	// Quando contador 11, T3 = 1
+	// Todos os outros serao 0
+	
+	// Verificar modo de funcionamento do Modulo ControleFFD, 
+	// isso definira saida 1 ou 0.
+
+	ControleFFD F0(S0, A, FF0, T0);
+	ControleFFD F1(S1, A, FF1, T1);
+	ControleFFD F2(S2, A, FF2, T2);
+	ControleFFD F3(S3, A, FF3, T3);
+	
+endmodule

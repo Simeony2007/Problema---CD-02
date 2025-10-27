@@ -1,7 +1,2 @@
-modulo main();
-
-
-	Multiplicador mult1(S, A, B, Clock)
-
-
+module main();
 endmodule
