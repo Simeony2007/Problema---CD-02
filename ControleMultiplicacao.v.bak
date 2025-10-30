@@ -1,0 +1,5 @@
+module ControleMultiplicacao(finalizado, ativCont, limpaCont, acumula, shift, clk, rst, start, contador);
+
+	start
+
+endmodule

@@ -1,5 +1,6 @@
-module Contador8Bits(S, clk, reset);
-	input clk, reset; // VERIFICAR WAVEFORM SEM O CLOCK, USANDO O BTN NO LUGAR!!!
+module Contador8Bits(S, clk, reset, toggle);
+	input clk, reset; 
+	input toggle;
 	output [2:0]S;
 	
 	wire [2:0]valorFF;
@@ -29,20 +30,20 @@ module Contador8Bits(S, clk, reset);
 		.S(valorFF[0]), 
 		.A(soma[0]), 
 		.SFF(S[0]), 
-		.Op());
+		.Op(toggle));
 		
 	ControleFFD Controle1(
 		.S(valorFF[1]), 
 		.A(soma[1]), 
 		.SFF(S[1]), 
-		.Op());	
+		.Op(toggle));	
 		
 	ControleFFD Controle2(
 		.S(valorFF[2]), 
 		.A(soma[2]), 
 		.SFF(S[2]), 
-		.Op());	
+		.Op(toggle));	
 		
-	SomComp2Bits somador(.S(soma), .Cout(GND), .A(S), .B(2'b01), .Cin(0));
+	SomComp3Bits somador(.S(soma), .Cout(GND), .A(S), .B(3'b001), .Cin(0));
 
 endmodule

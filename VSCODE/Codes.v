@@ -1,70 +1,52 @@
-module Registrador8Bits(saida, clock, reset, entrada);
-    output [7:0] saida;  
-    input clock, reset;  
-    input [7:0] entrada; 
+module ControleMultiplicacao(
+    output Finalizado, 
+    output ativCont, 
+    output limpaCont, 
+    output acumula, 
+    input Clk, 
+    input Rst, 
+    input Start, 
+    input [2:0]contador);
+    
+    // --- Fios Internos ---
+    wire SFF;     // O "Start Guardado"
+    wire EntFF;   // O "Próximo Estado"
+    wire nSFF;    // NOT(SFF)
+    wire contador_fim;
+    wire nContador_fim;
+    wire T1_Ligar, T2_Manter;
+    
+    // --- PEÇA 1: O FLIP-FLOP DE ESTADO ("Cérebro") ---
+    FlipFlopD Iniciar(
+        .s(SFF),
+        .a(EntFF),
+        .clk(Clk),
+        .reset(Rst) 
+    );
+    
+    // --- PEÇA 2: LÓGICA DO PRÓXIMO ESTADO (Calcula 'EntFF') ---
+    and And0_fim(contador_fim, contador[2], contador[1], contador[0]); 
+    
+    not u_nSFF (nSFF, SFF);
+    not u_nContador_fim (nContador_fim, contador_fim);
 
-    // Bit 0
-    FlipFlopD ff0 (
-        .a(entrada[0]),
-        .s(saida[0]),
-        .clk(clock),
-        .reset(reset)
-    );
-     
-    // Bit 1
-    FlipFlopD ff1 ( 
-        .a(entrada[1]),
-        .s(saida[1]),
-        .clk(clock),
-        .reset(reset)
-    );
+    and u_T1_Ligar (T1_Ligar, nSFF, Start);
+    and u_T2_Manter (T2_Manter, SFF, nContador_fim);
+    
+    or u_D_calc_final (EntFF, T1_Ligar, T2_Manter);
+    
+    // --- PEÇA 3: LÓGICA DAS SAÍDAS (CORRIGIDA) ---
+    
+    and And_Finalizado(Finalizado, SFF, contador_fim);
+    
+    // 'acumula' (Op do MUX, 1=Parar) = 1 SE (Ocioso OU Terminou)
+    or Or_acumula(acumula, nSFF, contador_fim);
+    
+    // 'ativCont' (Op do MUX, 1=Parar) = 1 SE (Ocioso OU Terminou)
+    or Or_ativCont(ativCont, nSFF, contador_fim);
 
-    // Bit 2
-    FlipFlopD ff2 ( 
-        .a(entrada[2]),
-        .s(saida[2]),
-        .clk(clock),
-        .reset(reset)
-    );
-
-    // Bit 3
-    FlipFlopD ff3 ( 
-        .a(entrada[3]),
-        .s(saida[3]),
-        .clk(clock),
-        .reset(reset)
-    );
-
-    // Bit 4
-    FlipFlopD ff4 ( 
-        .a(entrada[4]),
-        .s(saida[4]),
-        .clk(clock),
-        .reset(reset)
-    );
-
-    // Bit 5
-    FlipFlopD ff5 ( 
-        .a(entrada[5]),
-        .s(saida[5]),
-        .clk(clock),
-        .reset(reset)
-    );
-
-    // Bit 6
-    FlipFlopD ff6 ( 
-        .a(entrada[6]),
-        .s(saida[6]),
-        .clk(clock),
-        .reset(reset)
-    );
-
-    // Bit 7
-    FlipFlopD ff7 ( 
-        .a(entrada[7]),
-        .s(saida[7]),
-        .clk(clock),
-        .reset(reset)
-    );
-     
+    // 'limpaCont' (Reset do Contador, Ativo-ALTO = 1=Zerar)
+    // Lógica: limpaCont = NOT SFF
+    not Not_limpaCont(limpaCont, SFF); // <-- CORRIGIDO AQUI
+    
 endmodule

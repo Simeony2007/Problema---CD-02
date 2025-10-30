@@ -1,0 +1,55 @@
+module ControleReg8Bits(S, A, SFF, Op);
+	input [7:0]A;
+	input [7:0]SFF;
+	input Op;
+	output [7:0] S;
+
+	ControleFFD bit0(
+	.S(S[0]),
+	.A(A[0]),
+	.SFF(SFF[0]),
+	.Op(Op));
+
+	ControleFFD bit1(
+	.S(S[1]),
+	.A(A[1]),
+	.SFF(SFF[1]),
+	.Op(Op));
+	
+	ControleFFD bit2(
+	.S(S[2]),
+	.A(A[2]),
+	.SFF(SFF[2]),
+	.Op(Op));
+
+	ControleFFD bit3(
+	.S(S[3]),
+	.A(A[3]),
+	.SFF(SFF[3]),
+	.Op(Op));
+
+	ControleFFD bit4(
+	.S(S[4]),
+	.A(A[4]),
+	.SFF(SFF[4]),
+	.Op(Op));
+	
+	ControleFFD bit5(
+	.S(S[5]),
+	.A(A[5]),
+	.SFF(SFF[5]),
+	.Op(Op));
+
+	ControleFFD bit6(
+	.S(S[6]),
+	.A(A[6]),
+	.SFF(SFF[6]),
+	.Op(Op));
+
+	ControleFFD bit7(
+	.S(S[7]),
+	.A(A[7]),
+	.SFF(SFF[7]),
+	.Op(Op));
+
+endmodule

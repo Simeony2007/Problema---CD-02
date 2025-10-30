@@ -1,42 +1,1209 @@
-|Debounce
-S <= and0.DB_MAX_OUTPUT_PORT_TYPE
-Btn => Btn.IN1
-Clk => Clk.IN5
-rst => rst.IN5
+|Multiplicador
+S[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= S[6].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= S[7].DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= S[8].DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= S[9].DB_MAX_OUTPUT_PORT_TYPE
+S[10] <= S[10].DB_MAX_OUTPUT_PORT_TYPE
+S[11] <= S[11].DB_MAX_OUTPUT_PORT_TYPE
+S[12] <= S[12].DB_MAX_OUTPUT_PORT_TYPE
+S[13] <= S[13].DB_MAX_OUTPUT_PORT_TYPE
+S[14] <= S[14].DB_MAX_OUTPUT_PORT_TYPE
+S[15] <= S[15].DB_MAX_OUTPUT_PORT_TYPE
+A[0] => A[0].IN8
+A[1] => A[1].IN8
+A[2] => A[2].IN8
+A[3] => A[3].IN8
+A[4] => A[4].IN8
+A[5] => A[5].IN8
+A[6] => A[6].IN8
+A[7] => A[7].IN8
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Clk => Clk.IN4
+Start => Start.IN1
+Rst => Rst.IN3
 
 
-|Debounce|FlipFlopD:FF0
+|Multiplicador|Mult1Por8:mult0
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult1
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult2
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult3
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult4
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult5
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult6
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Mult1Por8:mult7
+S[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+B[0] => And0.IN1
+B[1] => And1.IN1
+B[2] => And2.IN1
+B[3] => And3.IN1
+B[4] => And4.IN1
+B[5] => And5.IN1
+B[6] => And6.IN1
+B[7] => And7.IN1
+
+
+|Multiplicador|Contador8Bits:cont
+S[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+clk => clk.IN3
+reset => reset.IN3
+toggle => toggle.IN3
+
+
+|Multiplicador|Contador8Bits:cont|FlipFlopD:ff0
 s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a => s~reg0.DATAIN
 clk => s~reg0.CLK
 reset => s~reg0.ACLR
 
 
-|Debounce|FlipFlopD:FF1
+|Multiplicador|Contador8Bits:cont|FlipFlopD:ff1
 s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a => s~reg0.DATAIN
 clk => s~reg0.CLK
 reset => s~reg0.ACLR
 
 
-|Debounce|FlipFlopD:FF2
+|Multiplicador|Contador8Bits:cont|FlipFlopD:ff2
 s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a => s~reg0.DATAIN
 clk => s~reg0.CLK
 reset => s~reg0.ACLR
 
 
-|Debounce|FlipFlopD:FF3
+|Multiplicador|Contador8Bits:cont|ControleFFD:Controle0
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|Contador8Bits:cont|ControleFFD:Controle1
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|Contador8Bits:cont|ControleFFD:Controle2
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|Contador8Bits:cont|SomComp3Bits:somador
+S[0] <= SomComp1bit:b0.S
+S[1] <= SomComp1bit:b1.S
+S[2] <= SomComp1bit:b2.S
+Cout <= SomComp1bit:b2.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+Cin => Cin.IN1
+
+
+|Multiplicador|Contador8Bits:cont|SomComp3Bits:somador|SomComp1bit:b0
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|Contador8Bits:cont|SomComp3Bits:somador|SomComp1bit:b1
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|Contador8Bits:cont|SomComp3Bits:somador|SomComp1bit:b2
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|Shifter:sift
+S[0] <= loop[0].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= loop[1].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= loop[2].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= loop[3].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= loop[4].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= loop[5].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= loop[6].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= loop[7].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= loop[8].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[9] <= loop[9].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[10] <= loop[10].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[11] <= loop[11].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[12] <= loop[12].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[13] <= loop[13].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[14] <= loop[14].saida.DB_MAX_OUTPUT_PORT_TYPE
+S[15] <= loop[15].saida.DB_MAX_OUTPUT_PORT_TYPE
+Contador[0] => And1.IN0
+Contador[0] => And3.IN0
+Contador[0] => And5.IN0
+Contador[0] => And7.IN0
+Contador[0] => And0.IN0
+Contador[0] => And2.IN0
+Contador[0] => And4.IN0
+Contador[0] => And6.IN0
+Contador[1] => And2.IN1
+Contador[1] => And3.IN1
+Contador[1] => And6.IN1
+Contador[1] => And7.IN1
+Contador[1] => And0.IN1
+Contador[1] => And1.IN1
+Contador[1] => And4.IN1
+Contador[1] => And5.IN1
+Contador[2] => And4.IN2
+Contador[2] => And5.IN2
+Contador[2] => And6.IN2
+Contador[2] => And7.IN2
+Contador[2] => And0.IN2
+Contador[2] => And1.IN2
+Contador[2] => And2.IN2
+Contador[2] => And3.IN2
+P1[0] => loop[0].vlr0.IN1
+P1[1] => loop[1].vlr0.IN1
+P1[2] => loop[2].vlr0.IN1
+P1[3] => loop[3].vlr0.IN1
+P1[4] => loop[4].vlr0.IN1
+P1[5] => loop[5].vlr0.IN1
+P1[6] => loop[6].vlr0.IN1
+P1[7] => loop[7].vlr0.IN1
+P1[8] => loop[8].vlr0.IN1
+P1[9] => loop[9].vlr0.IN1
+P1[10] => loop[10].vlr0.IN1
+P1[11] => loop[11].vlr0.IN1
+P1[12] => loop[12].vlr0.IN1
+P1[13] => loop[13].vlr0.IN1
+P1[14] => loop[14].vlr0.IN1
+P1[15] => loop[15].vlr0.IN1
+P2[0] => loop[0].vlr1.IN1
+P2[1] => loop[1].vlr1.IN1
+P2[2] => loop[2].vlr1.IN1
+P2[3] => loop[3].vlr1.IN1
+P2[4] => loop[4].vlr1.IN1
+P2[5] => loop[5].vlr1.IN1
+P2[6] => loop[6].vlr1.IN1
+P2[7] => loop[7].vlr1.IN1
+P2[8] => loop[8].vlr1.IN1
+P2[9] => loop[9].vlr1.IN1
+P2[10] => loop[10].vlr1.IN1
+P2[11] => loop[11].vlr1.IN1
+P2[12] => loop[12].vlr1.IN1
+P2[13] => loop[13].vlr1.IN1
+P2[14] => loop[14].vlr1.IN1
+P2[15] => loop[15].vlr1.IN1
+P3[0] => loop[0].vlr2.IN1
+P3[1] => loop[1].vlr2.IN1
+P3[2] => loop[2].vlr2.IN1
+P3[3] => loop[3].vlr2.IN1
+P3[4] => loop[4].vlr2.IN1
+P3[5] => loop[5].vlr2.IN1
+P3[6] => loop[6].vlr2.IN1
+P3[7] => loop[7].vlr2.IN1
+P3[8] => loop[8].vlr2.IN1
+P3[9] => loop[9].vlr2.IN1
+P3[10] => loop[10].vlr2.IN1
+P3[11] => loop[11].vlr2.IN1
+P3[12] => loop[12].vlr2.IN1
+P3[13] => loop[13].vlr2.IN1
+P3[14] => loop[14].vlr2.IN1
+P3[15] => loop[15].vlr2.IN1
+P4[0] => loop[0].vlr3.IN1
+P4[1] => loop[1].vlr3.IN1
+P4[2] => loop[2].vlr3.IN1
+P4[3] => loop[3].vlr3.IN1
+P4[4] => loop[4].vlr3.IN1
+P4[5] => loop[5].vlr3.IN1
+P4[6] => loop[6].vlr3.IN1
+P4[7] => loop[7].vlr3.IN1
+P4[8] => loop[8].vlr3.IN1
+P4[9] => loop[9].vlr3.IN1
+P4[10] => loop[10].vlr3.IN1
+P4[11] => loop[11].vlr3.IN1
+P4[12] => loop[12].vlr3.IN1
+P4[13] => loop[13].vlr3.IN1
+P4[14] => loop[14].vlr3.IN1
+P4[15] => loop[15].vlr3.IN1
+P5[0] => loop[0].vlr4.IN1
+P5[1] => loop[1].vlr4.IN1
+P5[2] => loop[2].vlr4.IN1
+P5[3] => loop[3].vlr4.IN1
+P5[4] => loop[4].vlr4.IN1
+P5[5] => loop[5].vlr4.IN1
+P5[6] => loop[6].vlr4.IN1
+P5[7] => loop[7].vlr4.IN1
+P5[8] => loop[8].vlr4.IN1
+P5[9] => loop[9].vlr4.IN1
+P5[10] => loop[10].vlr4.IN1
+P5[11] => loop[11].vlr4.IN1
+P5[12] => loop[12].vlr4.IN1
+P5[13] => loop[13].vlr4.IN1
+P5[14] => loop[14].vlr4.IN1
+P5[15] => loop[15].vlr4.IN1
+P6[0] => loop[0].vlr5.IN1
+P6[1] => loop[1].vlr5.IN1
+P6[2] => loop[2].vlr5.IN1
+P6[3] => loop[3].vlr5.IN1
+P6[4] => loop[4].vlr5.IN1
+P6[5] => loop[5].vlr5.IN1
+P6[6] => loop[6].vlr5.IN1
+P6[7] => loop[7].vlr5.IN1
+P6[8] => loop[8].vlr5.IN1
+P6[9] => loop[9].vlr5.IN1
+P6[10] => loop[10].vlr5.IN1
+P6[11] => loop[11].vlr5.IN1
+P6[12] => loop[12].vlr5.IN1
+P6[13] => loop[13].vlr5.IN1
+P6[14] => loop[14].vlr5.IN1
+P6[15] => loop[15].vlr5.IN1
+P7[0] => loop[0].vlr6.IN1
+P7[1] => loop[1].vlr6.IN1
+P7[2] => loop[2].vlr6.IN1
+P7[3] => loop[3].vlr6.IN1
+P7[4] => loop[4].vlr6.IN1
+P7[5] => loop[5].vlr6.IN1
+P7[6] => loop[6].vlr6.IN1
+P7[7] => loop[7].vlr6.IN1
+P7[8] => loop[8].vlr6.IN1
+P7[9] => loop[9].vlr6.IN1
+P7[10] => loop[10].vlr6.IN1
+P7[11] => loop[11].vlr6.IN1
+P7[12] => loop[12].vlr6.IN1
+P7[13] => loop[13].vlr6.IN1
+P7[14] => loop[14].vlr6.IN1
+P7[15] => loop[15].vlr6.IN1
+P8[0] => loop[0].vlr7.IN1
+P8[1] => loop[1].vlr7.IN1
+P8[2] => loop[2].vlr7.IN1
+P8[3] => loop[3].vlr7.IN1
+P8[4] => loop[4].vlr7.IN1
+P8[5] => loop[5].vlr7.IN1
+P8[6] => loop[6].vlr7.IN1
+P8[7] => loop[7].vlr7.IN1
+P8[8] => loop[8].vlr7.IN1
+P8[9] => loop[9].vlr7.IN1
+P8[10] => loop[10].vlr7.IN1
+P8[11] => loop[11].vlr7.IN1
+P8[12] => loop[12].vlr7.IN1
+P8[13] => loop[13].vlr7.IN1
+P8[14] => loop[14].vlr7.IN1
+P8[15] => loop[15].vlr7.IN1
+
+
+|Multiplicador|ControleMultiplicacao:control
+Finalizado <= And_Finalizado.DB_MAX_OUTPUT_PORT_TYPE
+ativCont <= Or_ativCont.DB_MAX_OUTPUT_PORT_TYPE
+limpaCont <= FlipFlopD:Iniciar.s
+acumula <= Or_acumula.DB_MAX_OUTPUT_PORT_TYPE
+Clk => Clk.IN1
+Rst => Rst.IN1
+Start => u_T1_Ligar.IN1
+contador[0] => And0_fim.IN0
+contador[1] => And0_fim.IN1
+contador[2] => And0_fim.IN2
+
+
+|Multiplicador|ControleMultiplicacao:control|FlipFlopD:Iniciar
 s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a => s~reg0.DATAIN
 clk => s~reg0.CLK
 reset => s~reg0.ACLR
 
 
-|Debounce|FlipFlopD:ValorAntigo
+|Multiplicador|SomComp16Bits:soma
+S[0] <= SomComp8bits:parte1.S
+S[1] <= SomComp8bits:parte1.S
+S[2] <= SomComp8bits:parte1.S
+S[3] <= SomComp8bits:parte1.S
+S[4] <= SomComp8bits:parte1.S
+S[5] <= SomComp8bits:parte1.S
+S[6] <= SomComp8bits:parte1.S
+S[7] <= SomComp8bits:parte1.S
+S[8] <= SomComp8bits:parte2.S
+S[9] <= SomComp8bits:parte2.S
+S[10] <= SomComp8bits:parte2.S
+S[11] <= SomComp8bits:parte2.S
+S[12] <= SomComp8bits:parte2.S
+S[13] <= SomComp8bits:parte2.S
+S[14] <= SomComp8bits:parte2.S
+S[15] <= SomComp8bits:parte2.S
+Cout <= SomComp8bits:parte2.Cout
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+A[8] => A[8].IN1
+A[9] => A[9].IN1
+A[10] => A[10].IN1
+A[11] => A[11].IN1
+A[12] => A[12].IN1
+A[13] => A[13].IN1
+A[14] => A[14].IN1
+A[15] => A[15].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+B[8] => B[8].IN1
+B[9] => B[9].IN1
+B[10] => B[10].IN1
+B[11] => B[11].IN1
+B[12] => B[12].IN1
+B[13] => B[13].IN1
+B[14] => B[14].IN1
+B[15] => B[15].IN1
+Cin => Cin.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1
+S[0] <= SomComp1bit:U0.port0
+S[1] <= SomComp1bit:U1.port0
+S[2] <= SomComp1bit:U2.port0
+S[3] <= SomComp1bit:U3.port0
+S[4] <= SomComp1bit:U4.port0
+S[5] <= SomComp1bit:U5.port0
+S[6] <= SomComp1bit:U6.port0
+S[7] <= SomComp1bit:U7.port0
+Cout <= SomComp1bit:U7.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Cin => Cin.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U0
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U1
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U2
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U3
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U4
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U5
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U6
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte1|SomComp1bit:U7
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2
+S[0] <= SomComp1bit:U0.port0
+S[1] <= SomComp1bit:U1.port0
+S[2] <= SomComp1bit:U2.port0
+S[3] <= SomComp1bit:U3.port0
+S[4] <= SomComp1bit:U4.port0
+S[5] <= SomComp1bit:U5.port0
+S[6] <= SomComp1bit:U6.port0
+S[7] <= SomComp1bit:U7.port0
+Cout <= SomComp1bit:U7.port1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+B[4] => B[4].IN1
+B[5] => B[5].IN1
+B[6] => B[6].IN1
+B[7] => B[7].IN1
+Cin => Cin.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U0
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U1
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U2
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U3
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U4
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U5
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U6
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|SomComp16Bits:soma|SomComp8bits:parte2|SomComp1bit:U7
+S <= Xor0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+A => Xor0.IN0
+A => Or0.IN0
+A => And1.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor0.IN2
+Cin => Or0.IN1
+Cin => And1.IN1
+
+
+|Multiplicador|Registrador8Bits:Reg0
+saida[0] <= FlipFlopD:ff0.s
+saida[1] <= FlipFlopD:ff1.s
+saida[2] <= FlipFlopD:ff2.s
+saida[3] <= FlipFlopD:ff3.s
+saida[4] <= FlipFlopD:ff4.s
+saida[5] <= FlipFlopD:ff5.s
+saida[6] <= FlipFlopD:ff6.s
+saida[7] <= FlipFlopD:ff7.s
+clock => clock.IN8
+reset => reset.IN8
+entrada[0] => entrada[0].IN1
+entrada[1] => entrada[1].IN1
+entrada[2] => entrada[2].IN1
+entrada[3] => entrada[3].IN1
+entrada[4] => entrada[4].IN1
+entrada[5] => entrada[5].IN1
+entrada[6] => entrada[6].IN1
+entrada[7] => entrada[7].IN1
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff0
 s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
 a => s~reg0.DATAIN
 clk => s~reg0.CLK
 reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff1
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff2
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff3
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff4
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff5
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff6
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg0|FlipFlopD:ff7
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1
+saida[0] <= FlipFlopD:ff0.s
+saida[1] <= FlipFlopD:ff1.s
+saida[2] <= FlipFlopD:ff2.s
+saida[3] <= FlipFlopD:ff3.s
+saida[4] <= FlipFlopD:ff4.s
+saida[5] <= FlipFlopD:ff5.s
+saida[6] <= FlipFlopD:ff6.s
+saida[7] <= FlipFlopD:ff7.s
+clock => clock.IN8
+reset => reset.IN8
+entrada[0] => entrada[0].IN1
+entrada[1] => entrada[1].IN1
+entrada[2] => entrada[2].IN1
+entrada[3] => entrada[3].IN1
+entrada[4] => entrada[4].IN1
+entrada[5] => entrada[5].IN1
+entrada[6] => entrada[6].IN1
+entrada[7] => entrada[7].IN1
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff0
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff1
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff2
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff3
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff4
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff5
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff6
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|Registrador8Bits:Reg1|FlipFlopD:ff7
+s <= s~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a => s~reg0.DATAIN
+clk => s~reg0.CLK
+reset => s~reg0.ACLR
+
+
+|Multiplicador|ControleReg8Bits:controle0
+S[0] <= ControleFFD:bit0.S
+S[1] <= ControleFFD:bit1.S
+S[2] <= ControleFFD:bit2.S
+S[3] <= ControleFFD:bit3.S
+S[4] <= ControleFFD:bit4.S
+S[5] <= ControleFFD:bit5.S
+S[6] <= ControleFFD:bit6.S
+S[7] <= ControleFFD:bit7.S
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+SFF[0] => SFF[0].IN1
+SFF[1] => SFF[1].IN1
+SFF[2] => SFF[2].IN1
+SFF[3] => SFF[3].IN1
+SFF[4] => SFF[4].IN1
+SFF[5] => SFF[5].IN1
+SFF[6] => SFF[6].IN1
+SFF[7] => SFF[7].IN1
+Op => Op.IN8
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit0
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit1
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit2
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit3
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit4
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit5
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit6
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle0|ControleFFD:bit7
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1
+S[0] <= ControleFFD:bit0.S
+S[1] <= ControleFFD:bit1.S
+S[2] <= ControleFFD:bit2.S
+S[3] <= ControleFFD:bit3.S
+S[4] <= ControleFFD:bit4.S
+S[5] <= ControleFFD:bit5.S
+S[6] <= ControleFFD:bit6.S
+S[7] <= ControleFFD:bit7.S
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+A[7] => A[7].IN1
+SFF[0] => SFF[0].IN1
+SFF[1] => SFF[1].IN1
+SFF[2] => SFF[2].IN1
+SFF[3] => SFF[3].IN1
+SFF[4] => SFF[4].IN1
+SFF[5] => SFF[5].IN1
+SFF[6] => SFF[6].IN1
+SFF[7] => SFF[7].IN1
+Op => Op.IN8
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit0
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit1
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit2
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit3
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit4
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit5
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit6
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
+
+
+|Multiplicador|ControleReg8Bits:controle1|ControleFFD:bit7
+S <= or0.DB_MAX_OUTPUT_PORT_TYPE
+A => and0.IN0
+SFF => and1.IN0
+Op => and1.IN1
+Op => and0.IN1
 
 

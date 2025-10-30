@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Oct 27 12:44:20 2025
+Analysis & Synthesis Status : Successful - Thu Oct 30 16:38:13 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : Versao1
-Top-level Entity Name : Debounce
+Top-level Entity Name : Multiplicador
 Family : MAX 10
-Total logic elements : 6
-    Total combinational functions : 1
-    Dedicated logic registers : 5
-Total registers : 5
-Total pins : 4
+Total logic elements : 21
+    Total combinational functions : 21
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 35
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
