@@ -7,7 +7,7 @@ Note: if both Questa Intel FPGA Edition and ModelSim executables are available, 
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Versao1 -c Versao1 --vector_source="D:/Estudos/UEFS/PBLs/CD - Problema 2/MultiplicadorTeste.vwf" --testbench_file="D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/MultiplicadorTeste.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Versao1 -c Versao1 --vector_source="D:/Estudos/UEFS/PBLs/CD - Problema 2/TesteDivisor.vwf" --testbench_file="D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/TesteDivisor.vwf.vt"
 
 TBBmalloc: skip allocation functions replacement in ucrtbase.dll: unknown prologue for function _msize
 
@@ -28,11 +28,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Thu Oct 30 16:44:50 2025
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Versao1 -c Versao1 --vector_source="D:/Estudos/UEFS/PBLs/CD - Problema 2/MultiplicadorTeste.vwf" --testbench_file="D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/MultiplicadorTeste.vwf.vt"
+    Info: Processing started: Thu Oct 30 19:04:33 2025
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Versao1 -c Versao1 --vector_source="D:/Estudos/UEFS/PBLs/CD - Problema 2/TesteDivisor.vwf" --testbench_file="D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/TesteDivisor.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-
-urce file when writing test bench files
 
 Completed successfully. 
 
@@ -61,15 +59,15 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Thu Oct 30 16:44:51 2025
+    Info: Processing started: Thu Oct 30 19:04:34 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/" Versao1 -c Versao1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Versao1.vo in folder "D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4674 megabytes
-    Info: Processing ended: Thu Oct 30 16:44:51 2025
+    Info: Processing ended: Thu Oct 30 19:04:34 2025
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 Completed successfully. 
 
@@ -94,159 +92,70 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-
-# Start time: 16:44:52 on Oct 30,2025
+# Start time: 19:04:35 on Oct 30,2025
 # vlog -work work Versao1.vo 
 
-# -- Compiling module Multiplicador
+# -- Compiling module Divisor
 
 # -- Compiling module hard_block
 
 # 
-
 # Top level modules:
-# 	Multiplicador
+# 	Divisor
 
-# End time: 16:44:53 on Oct 30,2025, Elapsed time: 0:00:01
-
+# End time: 19:04:35 on Oct 30,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:04:35 on Oct 30,2025
+# vlog -work work TesteDivisor.vwf.vt 
 
-# Start time: 16:44:53 on Oct 30,2025
-
-# vlog -work work MultiplicadorTeste.vwf.vt 
-
-# -- Compiling module Multiplicador_vlg_vec_tst
+# -- Compiling module Divisor_vlg_vec_tst
 
 # 
-
 # Top level modules:
-# 	Multiplicador_vlg_vec_tst
+# 	Divisor_vlg_vec_tst
 
-# End time: 16:44:53 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 19:04:35 on Oct 30,2025, Elapsed time: 0:00:00
 
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Multiplicador_vlg_vec_tst 
-# Start time: 16:44:53 on Oct 30,2025
-# Loading work.Multiplicador_vlg_vec_tst
-# Loading work.Multiplicador
+# vsim -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Divisor_vlg_vec_tst 
+# Start time: 19:04:35 on Oct 30,2025
+# Loading work.Divisor_vlg_vec_tst
+# Loading work.Divisor
 # Loading work.hard_block
 # Loading fiftyfivenm_ver.fiftyfivenm_lcell_comb
 # Loading fiftyfivenm_ver.fiftyfivenm_io_obuf
 # Loading fiftyfivenm_ver.fiftyfivenm_io_ibuf
-# Loading fiftyfivenm_ver.fiftyfivenm_clkctrl
-# Loading fiftyfivenm_ver.fiftyfivenm_mux41
-# Loading fiftyfivenm_ver.fiftyfivenm_ena_reg
-# Loading altera_ver.dffeas
 # Loading fiftyfivenm_ver.fiftyfivenm_unvm
 # Loading fiftyfivenm_ver.fiftyfivenm_adcblock
-# Loading altera_ver.PRIM_GDFF_LOW
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC1~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /Multiplicador_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: Versao1.vo Line: 1158
-# ** Warning: (vsim-3722) Versao1.vo(1158): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /Divisor_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: Versao1.vo Line: 2439
+# ** Warning: (vsim-3722) Versao1.vo(2439): [TFMPC] - Missing connection for port 'clk_dft'.
 # ** Warning: (vsim-2685) [TFMPC] - Too few port connections for '\~QUARTUS_CREATED_ADC2~ '.  Expected 8, found 7.
-#    Time: 0 ps  Iteration: 0  Instance: /Multiplicador_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: Versao1.vo Line: 1181
-# ** Warning: (vsim-3722) Versao1.vo(1181): [TFMPC] - Missing connection for port 'clk_dft'.
+#    Time: 0 ps  Iteration: 0  Instance: /Divisor_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC2~  File: Versao1.vo Line: 2462
+# ** Warning: (vsim-3722) Versao1.vo(2462): [TFMPC] - Missing connection for port 'clk_dft'.
 
 # after#26
 
-# ** Note: $finish    : MultiplicadorTeste.vwf.vt(53)
-#    Time: 1 us  Iteration: 0  Instance: /Multiplicador_vlg_vec_tst
+# ** Note: $finish    : TesteDivisor.vwf.vt(51)
+#    Time: 1 us  Iteration: 0  Instance: /Divisor_vlg_vec_tst
 
-# End time: 16:44:53 on Oct 30,2025, Elapsed time: 0:00:00
+# End time: 19:04:36 on Oct 30,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 4
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/Estudos/UEFS/PBLs/CD - Problema 2/MultiplicadorTeste.vwf...
+Reading D:/Estudos/UEFS/PBLs/CD - Problema 2/TesteDivisor.vwf...
 
 Reading D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/Versao1.msim.vcd...
 
 Processing channel transitions... 
 
-Warning: Contador[2] - signal not found in VCD.
-
-Warning: Contador[1] - signal not found in VCD.
-
-Warning: Contador[0] - signal not found in VCD.
-
-Warning: Shift[15] - signal not found in VCD.
-
-Warning: Shift[14] - signal not found in VCD.
-
-Warning: Shift[13] - signal not found in VCD.
-
-Warning: Shift[12] - signal not found in VCD.
-
-Warning: Shift[11] - signal not found in VCD.
-
-Warning: Shift[10] - signal not found in VCD.
-
-Warning: Shift[9] - signal not found in VCD.
-
-Warning: Shift[8] - signal not found in VCD.
-
-Warning: Shift[7] - signal not found in VCD.
-
-Warning: Shift[6] - signal not found in VCD.
-
-Warning: Shift[5] - signal not found in VCD.
-
-Warning: Shift[4] - signal not found in VCD.
-
-Warning: Shift[3] - signal not found in VCD.
-
-Warning: Shift[2] - signal not found in VCD.
-
-Warning: Shift[1] - signal not found in VCD.
-
-Warning: Shift[0] - signal not found in VCD.
-
-Warning: Soma[15] - signal not found in VCD.
-
-Warning: Soma[14] - signal not found in VCD.
-
-Warning: Soma[13] - signal not found in VCD.
-
-Warning: Soma[12] - signal not found in VCD.
-
-Warning: Soma[11] - signal not found in VCD.
-
-Warning: Soma[10] - signal not found in VCD.
-
-Warning: Soma[9] - signal not found in VCD.
-
-Warning: Soma[8] - signal not found in VCD.
-
-Warning: Soma[7] - signal not found in VCD.
-
-Warning: Soma[6] - signal not found in VCD.
-
-Warning: Soma[5] - signal not found in VCD.
-
-Warning: Soma[4] - signal not found in VCD.
-
-Warning: Soma[3] - signal not found in VCD.
-
-Warning: Soma[2] - signal not found in VCD.
-
-Warning: Soma[1] - signal not found in VCD.
-
-Warning: Soma[0] - signal not found in VCD.
-
-Warning: T0 - signal not found in VCD.
-
-Warning: T1 - signal not found in VCD.
-
-Warning: T2 - signal not found in VCD.
-
-Warning: T3 - signal not found in VCD.
-
-Writing the resulting VWF to D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/Versao1_20251030164453.sim.vwf
+Writing the resulting VWF to D:/Estudos/UEFS/PBLs/CD - Problema 2/simulation/qsim/Versao1_20251030190436.sim.vwf
 
 Finished VCD to VWF conversion.
 

@@ -1,1 +1,9 @@
 Info (10281): Verilog HDL Declaration information at Multiplicador.v(19): object "Soma" differs only in case from object "soma" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Multiplicador.v Line: 19
+Info (10281): Verilog HDL Declaration information at Divisor.v(9): object "Sub0" differs only in case from object "sub0" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 9
+Info (10281): Verilog HDL Declaration information at Divisor.v(10): object "Sub1" differs only in case from object "sub1" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 10
+Info (10281): Verilog HDL Declaration information at Divisor.v(11): object "Sub2" differs only in case from object "sub2" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 11
+Info (10281): Verilog HDL Declaration information at Divisor.v(12): object "Sub3" differs only in case from object "sub3" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 12
+Info (10281): Verilog HDL Declaration information at Divisor.v(13): object "Sub4" differs only in case from object "sub4" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 13
+Info (10281): Verilog HDL Declaration information at Divisor.v(14): object "Sub5" differs only in case from object "sub5" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 14
+Info (10281): Verilog HDL Declaration information at Divisor.v(15): object "Sub6" differs only in case from object "sub6" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 15
+Info (10281): Verilog HDL Declaration information at Divisor.v(16): object "Sub7" differs only in case from object "sub7" in the same scope File: D:/Estudos/UEFS/PBLs/CD - Problema 2/Divisor.v Line: 16

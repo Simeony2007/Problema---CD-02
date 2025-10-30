@@ -105,42 +105,67 @@ R14
 R11
 R12
 n@debounce_vlg_vec_tst
-vhard_block
-Z15 !s110 1761853493
+vDivisor
+Z15 !s110 1761861875
 !i10b 1
-!s100 Nj6QJd19k5OAO4Nz>7Jb^3
+!s100 6GUodJiM3kKLn4Rc2lcYA2
 R2
-IL03]g4Q]nnHSj:I6heaQH1
+IfhGKQ=m]@5>YhOZ8U4UoX2
 R3
 R0
-Z16 w1761853491
+Z16 w1761861874
 R5
 R6
-!i122 157
-L0 1237 45
+!i122 173
+L0 32 2487
 R7
 r1
 !s85 0
 31
-Z17 !s108 1761853492.000000
+Z17 !s108 1761861875.000000
 R9
 R10
 !i113 1
 R11
 R12
-vMultiplicador
+n@divisor
+vDivisor_vlg_vec_tst
 R15
 !i10b 1
-!s100 UDY^hlh`geoNg9[f6<6030
+!s100 Lab]GXIzcjNV^df3@5Qz>1
 R2
-IV0c:oDcD=BMzTeiJGKE^N3
+ISeDeTjc:mU9FDEJ@Q?k`P3
+R3
+R0
+R16
+8TesteDivisor.vwf.vt
+FTesteDivisor.vwf.vt
+!i122 174
+L0 30 104
+R7
+r1
+!s85 0
+31
+R17
+!s107 TesteDivisor.vwf.vt|
+!s90 -work|work|TesteDivisor.vwf.vt|
+!i113 1
+R11
+R12
+n@divisor_vlg_vec_tst
+vhard_block
+R15
+!i10b 1
+!s100 JHNQWaHj=Po;0ONX>;64H2
+R2
+IkhdUBoFSkTEE8VAGH^KIE3
 R3
 R0
 R16
 R5
 R6
-!i122 157
-L0 32 1204
+!i122 173
+L0 2520 45
 R7
 r1
 !s85 0
@@ -151,16 +176,39 @@ R10
 !i113 1
 R11
 R12
+vMultiplicador
+Z18 !s110 1761853493
+!i10b 1
+!s100 UDY^hlh`geoNg9[f6<6030
+R2
+IV0c:oDcD=BMzTeiJGKE^N3
+R3
+R0
+Z19 w1761853491
+R5
+R6
+!i122 157
+L0 32 1204
+R7
+r1
+!s85 0
+31
+!s108 1761853492.000000
+R9
+R10
+!i113 1
+R11
+R12
 n@multiplicador
 vMultiplicador_vlg_vec_tst
-R15
+R18
 !i10b 1
 !s100 zll5[YJF9cj3`FbmbCm1l3
 R2
 I3Wa1kH<F1zYd:60BDiV>a2
 R3
 R0
-R16
+R19
 8MultiplicadorTeste.vwf.vt
 FMultiplicadorTeste.vwf.vt
 !i122 158
@@ -177,7 +225,7 @@ R11
 R12
 n@multiplicador_vlg_vec_tst
 vRPNInput
-Z18 !s110 1761687847
+Z20 !s110 1761687847
 !i10b 1
 !s100 P1^d`_UI62WL3S`OjIHM:0
 R2
@@ -193,7 +241,7 @@ R7
 r1
 !s85 0
 31
-Z19 !s108 1761687847.000000
+Z21 !s108 1761687847.000000
 R9
 R10
 !i113 1
@@ -201,7 +249,7 @@ R11
 R12
 n@r@p@n@input
 vRPNInput_vlg_vec_tst
-R18
+R20
 !i10b 1
 !s100 =h`ThLeheZTT<o=O3VhML0
 R2
@@ -217,7 +265,7 @@ R7
 r1
 !s85 0
 31
-R19
+R21
 !s107 TesteRPN.vwf.vt|
 !s90 -work|work|TesteRPN.vwf.vt|
 !i113 1
@@ -225,7 +273,7 @@ R11
 R12
 n@r@p@n@input_vlg_vec_tst
 vShifter
-Z20 !s110 1761696730
+Z22 !s110 1761696730
 !i10b 1
 !s100 k[^4eU<9L2NX]^GKM>f7o3
 R2
@@ -241,7 +289,7 @@ R7
 r1
 !s85 0
 31
-Z21 !s108 1761696730.000000
+Z23 !s108 1761696730.000000
 R9
 R10
 !i113 1
@@ -249,7 +297,7 @@ R11
 R12
 n@shifter
 vShifter_vlg_vec_tst
-R20
+R22
 !i10b 1
 !s100 ?j`Y_eW`f1nB1KUAYkGml3
 R2
@@ -265,7 +313,7 @@ R7
 r1
 !s85 0
 31
-R21
+R23
 !s107 TesteSwitcher.vwf.vt|
 !s90 -work|work|TesteSwitcher.vwf.vt|
 !i113 1
