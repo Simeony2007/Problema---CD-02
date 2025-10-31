@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Oct 30 18:52:21 2025
+Analysis & Synthesis Status : Successful - Fri Oct 31 11:29:42 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : Versao1
-Top-level Entity Name : Divisor
+Top-level Entity Name : main
 Family : MAX 10
-Total logic elements : 102
-    Total combinational functions : 102
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 33
+Total logic elements : 389
+    Total combinational functions : 378
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 40
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

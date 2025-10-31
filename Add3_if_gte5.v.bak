@@ -1,0 +1,31 @@
+module Add3_if_gte5(BCD_out, BCD_in);
+    output [3:0] BCD_out;
+    input  [3:0] BCD_in;
+    wire   gte5, w1, w2;
+    wire   [3:0] B_val, B_zero;
+    wire   Cout_discard;
+
+    // Lógica para gte5 (>= 5)
+    // gte5 = BCD_in[3] OR (BCD_in[2] AND (BCD_in[1] OR BCD_in[0]))
+    or(w1, BCD_in[1], BCD_in[0]);
+    and(w2, BCD_in[2], w1);
+    or(gte5, BCD_in[3], w2);
+    
+    // Fio terra
+    and(B_zero[0], 1'b0, 1'b0); // GND
+    
+    // Valor 3 (0011) se gte5=1, senão 0
+    and(B_val[0], gte5, 1'b1);
+    and(B_val[1], gte5, 1'b1);
+    and(B_val[2], B_zero[0], 1'b1); // 0
+    and(B_val[3], B_zero[0], 1'b1); // 0
+
+    // Soma BCD_in + (gte5 ? 3 : 0)
+    SomComp4bit ADD3 (
+        .S(BCD_out), 
+        .Cout(Cout_discard), 
+        .A(BCD_in), 
+        .B(B_val), 
+        .Cin(B_zero[0]) // Cin = 0
+    );
+endmodule

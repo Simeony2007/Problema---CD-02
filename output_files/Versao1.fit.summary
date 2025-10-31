@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Oct 30 18:52:27 2025
+Fitter Status : Successful - Fri Oct 31 11:29:58 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : Versao1
-Top-level Entity Name : Divisor
+Top-level Entity Name : main
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 103 / 49,760 ( < 1 % )
-    Total combinational functions : 103 / 49,760 ( < 1 % )
-    Dedicated logic registers : 0 / 49,760 ( 0 % )
-Total registers : 0
-Total pins : 33 / 360 ( 9 % )
+Total logic elements : 383 / 49,760 ( < 1 % )
+    Total combinational functions : 379 / 49,760 ( < 1 % )
+    Dedicated logic registers : 36 / 49,760 ( < 1 % )
+Total registers : 36
+Total pins : 40 / 360 ( 11 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

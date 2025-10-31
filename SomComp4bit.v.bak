@@ -1,0 +1,1 @@
+module SomComp4bit(S, Cout, A, B, Cin)

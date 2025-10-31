@@ -4,135 +4,163 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "S[0]",
+					"name" : "Div0_flag",
 					"strict" : false
 				},
 				{
-					"name" : "S[1]",
+					"name" : "SegA[0]",
 					"strict" : false
 				},
 				{
-					"name" : "S[2]",
+					"name" : "SegA[1]",
 					"strict" : false
 				},
 				{
-					"name" : "S[3]",
+					"name" : "SegA[2]",
 					"strict" : false
 				},
 				{
-					"name" : "S[4]",
+					"name" : "SegB[0]",
 					"strict" : false
 				},
 				{
-					"name" : "S[5]",
+					"name" : "SegB[1]",
 					"strict" : false
 				},
 				{
-					"name" : "S[6]",
+					"name" : "SegB[2]",
 					"strict" : false
 				},
 				{
-					"name" : "S[7]",
+					"name" : "SegC[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[0]",
+					"name" : "SegC[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[1]",
+					"name" : "SegC[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[2]",
+					"name" : "SegD[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[3]",
+					"name" : "SegD[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[4]",
+					"name" : "SegD[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[5]",
+					"name" : "SegE[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[6]",
+					"name" : "SegE[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Resto[7]",
+					"name" : "SegE[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Div0",
+					"name" : "SegF[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[7]",
+					"name" : "SegF[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[6]",
+					"name" : "SegF[2]",
 					"strict" : false
 				},
 				{
-					"name" : "B[5]",
+					"name" : "SegG[0]",
 					"strict" : false
 				},
 				{
-					"name" : "B[4]",
+					"name" : "SegG[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "SegG[2]",
 					"strict" : false
 				},
 				{
-					"name" : "B[2]",
+					"name" : "DisplaySelect[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "OpSelect[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "OpSelect[0]",
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "OpSelect[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "DisplaySelect[0]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "BaseSelect[0]",
 					"strict" : false
 				},
 				{
-					"name" : "A[4]",
+					"name" : "BaseSelect[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
+					"name" : "Clk",
 					"strict" : false
 				},
 				{
-					"name" : "A[7]",
+					"name" : "Rst",
 					"strict" : false
 				},
 				{
-					"name" : "A[6]",
+					"name" : "DataIn[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "DataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Enter_btn",
 					"strict" : false
 				}
 			]

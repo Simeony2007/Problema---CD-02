@@ -1,0 +1,130 @@
+module MUX_1bit_2para1(Y, A, B, S);
+    output Y;
+    input  A, B, S;
+    wire   nS, wA, wB;
+    
+    not(nS, S);
+    and(wA, A, nS);
+    and(wB, B, S);
+    or(Y, wA, wB);
+endmodule
+
+module MUX_8bit_2para1(Y, A, B, S);
+    output [7:0] Y;
+    input  [7:0] A, B;
+    input  S;
+
+    MUX_1bit_2para1 m0(Y[0], A[0], B[0], S);
+    MUX_1bit_2para1 m1(Y[1], A[1], B[1], S);
+    MUX_1bit_2para1 m2(Y[2], A[2], B[2], S);
+    MUX_1bit_2para1 m3(Y[3], A[3], B[3], S);
+    MUX_1bit_2para1 m4(Y[4], A[4], B[4], S);
+    MUX_1bit_2para1 m5(Y[5], A[5], B[5], S);
+    MUX_1bit_2para1 m6(Y[6], A[6], B[6], S);
+    MUX_1bit_2para1 m7(Y[7], A[7], B[7], S);
+endmodule
+
+module MUX_8bit_4para1(Y, I0, I1, I2, I3, S);
+    output [7:0] Y;
+    input  [7:0] I0, I1, I2, I3;
+    input  [1:0] S;
+    wire   [7:0] MuxLo, MuxHi;
+
+    // Estágio 1
+    MUX_8bit_2para1 Mux01(MuxLo, I0, I1, S[0]);
+    MUX_8bit_2para1 Mux23(MuxHi, I2, I3, S[0]);
+    // Estágio 2
+    MUX_8bit_2para1 MuxFinal(Y, MuxLo, MuxHi, S[1]);
+endmodule
+
+module Decoder_3para8(Y, S);
+    output [7:0] Y;
+    input  [2:0] S;
+    wire   nS0, nS1, nS2;
+
+    not(nS0, S[0]);
+    not(nS1, S[1]);
+    not(nS2, S[2]);
+
+    and(Y[0], nS2, nS1, nS0); // 000
+    and(Y[1], nS2, nS1, S[0]); // 001
+    and(Y[2], nS2, S[1], nS0); // 010
+    and(Y[3], nS2, S[1], S[0]); // 011
+    and(Y[4], S[2], nS1, nS0); // 100
+    and(Y[5], S[2], nS1, S[0]); // 101
+    and(Y[6], S[2], S[1], nS0); // 110
+    and(Y[7], S[2], S[1], S[0]); // 111
+endmodule
+
+// MUX 8:1 de 1 bit (base para o MUX da ULA)
+module MUX_1bit_8para1(Y, I, S);
+    output Y;
+    input  [7:0] I;
+    input  [2:0] S;
+    wire   [7:0] Dec, w;
+    
+    Decoder_3para8 U_Dec(Dec, S);
+    
+    and(w[0], I[0], Dec[0]);
+    and(w[1], I[1], Dec[1]);
+    and(w[2], I[2], Dec[2]);
+    and(w[3], I[3], Dec[3]);
+    and(w[4], I[4], Dec[4]);
+    and(w[5], I[5], Dec[5]);
+    and(w[6], I[6], Dec[6]);
+    and(w[7], I[7], Dec[7]);
+    
+    or(Y, w[0], w[1], w[2], w[3], w[4], w[5], w[6], w[7]);
+endmodule
+
+// MUX 8:1 de 8 bits (o MUX principal da ULA)
+module MUX_8bit_8para1(Y, S, I0, I1, I2, I3, I4, I5, I6, I7);
+    output [7:0] Y;
+    input  [2:0] S;
+    input  [7:0] I0, I1, I2, I3, I4, I5, I6, I7;
+
+    MUX_1bit_8para1 m0(Y[0], {I7[0],I6[0],I5[0],I4[0],I3[0],I2[0],I1[0],I0[0]}, S);
+    MUX_1bit_8para1 m1(Y[1], {I7[1],I6[1],I5[1],I4[1],I3[1],I2[1],I1[1],I0[1]}, S);
+    MUX_1bit_8para1 m2(Y[2], {I7[2],I6[2],I5[2],I4[2],I3[2],I2[2],I1[2],I0[2]}, S);
+    MUX_1bit_8para1 m3(Y[3], {I7[3],I6[3],I5[3],I4[3],I3[3],I2[3],I1[3],I0[3]}, S);
+    MUX_1bit_8para1 m4(Y[4], {I7[4],I6[4],I5[4],I4[4],I3[4],I2[4],I1[4],I0[4]}, S);
+    MUX_1bit_8para1 m5(Y[5], {I7[5],I6[5],I5[5],I4[5],I3[5],I2[5],I1[5],I0[5]}, S);
+    MUX_1bit_8para1 m6(Y[6], {I7[6],I6[6],I5[6],I4[6],I3[6],I2[6],I1[6],I0[6]}, S);
+    MUX_1bit_8para1 m7(Y[7], {I7[7],I6[7],I5[7],I4[7],I3[7],I2[7],I1[7],I0[7]}, S);
+endmodule
+
+// MUX 8:1 de 16 bits (para o barramento de resultado final)
+module MUX_16bit_8para1(Y, S, I0, I1, I2, I3, I4, I5, I6, I7);
+    output [15:0] Y;
+    input  [2:0] S;
+    input  [15:0] I0, I1, I2, I3, I4, I5, I6, I7;
+
+    // Instancia 16 MUXes de 1 bit
+    MUX_1bit_8para1 m0(Y[0], {I7[0],I6[0],I5[0],I4[0],I3[0],I2[0],I1[0],I0[0]}, S);
+    MUX_1bit_8para1 m1(Y[1], {I7[1],I6[1],I5[1],I4[1],I3[1],I2[1],I1[1],I0[1]}, S);
+    MUX_1bit_8para1 m2(Y[2], {I7[2],I6[2],I5[2],I4[2],I3[2],I2[2],I1[2],I0[2]}, S);
+    MUX_1bit_8para1 m3(Y[3], {I7[3],I6[3],I5[3],I4[3],I3[3],I2[3],I1[3],I0[3]}, S);
+    MUX_1bit_8para1 m4(Y[4], {I7[4],I6[4],I5[4],I4[4],I3[4],I2[4],I1[4],I0[4]}, S);
+    MUX_1bit_8para1 m5(Y[5], {I7[5],I6[5],I5[5],I4[5],I3[5],I2[5],I1[5],I0[5]}, S);
+    MUX_1bit_8para1 m6(Y[6], {I7[6],I6[6],I5[6],I4[6],I3[6],I2[6],I1[6],I0[6]}, S);
+    MUX_1bit_8para1 m7(Y[7], {I7[7],I6[7],I5[7],I4[7],I3[7],I2[7],I1[7],I0[7]}, S);
+    MUX_1bit_8para1 m8(Y[8], {I7[8],I6[8],I5[8],I4[8],I3[8],I2[8],I1[8],I0[8]}, S);
+    MUX_1bit_8para1 m9(Y[9], {I7[9],I6[9],I5[9],I4[9],I3[9],I2[9],I1[9],I0[9]}, S);
+    MUX_1bit_8para1 m10(Y[10], {I7[10],I6[10],I5[10],I4[10],I3[10],I2[10],I1[10],I0[10]}, S);
+    MUX_1bit_8para1 m11(Y[11], {I7[11],I6[11],I5[11],I4[11],I3[11],I2[11],I1[11],I0[11]}, S);
+    MUX_1bit_8para1 m12(Y[12], {I7[12],I6[12],I5[12],I4[12],I3[12],I2[12],I1[12],I0[12]}, S);
+    MUX_1bit_8para1 m13(Y[13], {I7[13],I6[13],I5[13],I4[13],I3[13],I2[13],I1[13],I0[13]}, S);
+    MUX_1bit_8para1 m14(Y[14], {I7[14],I6[14],I5[14],I4[14],I3[14],I2[14],I1[14],I0[14]}, S);
+    MUX_1bit_8para1 m15(Y[15], {I7[15],I6[15],I5[15],I4[15],I3[15],I2[15],I1[15],I0[15]}, S);
+endmodule
+
+// MUX 2:1 de 3 bits (usado para o seletor de base do display)
+module MUX_3bit_2para1(Y, A, B, S);
+    output [2:0] Y;
+    input  [2:0] A, B;
+    input  S;
+
+    MUX_1bit_2para1 m0(Y[0], A[0], B[0], S);
+    MUX_1bit_2para1 m1(Y[1], A[1], B[1], S);
+    MUX_1bit_2para1 m2(Y[2], A[2], B[2], S);
+endmodule
